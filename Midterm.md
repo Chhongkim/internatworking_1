@@ -1,41 +1,5 @@
 # VLAN, EtherChannel & Inter-VLAN Routing Lab
 
-> **Note:** Replace `YourName` with your actual name in every hostname and password.
-
-## Topology Summary
-
-| Link | Protocol | Ports |
-|---|---|---|
-| S1 ↔ S2 | LACP (active) | S1 Fa0/1-2 ↔ S2 Fa0/1-2 (Port-Channel 1) |
-| S1 ↔ S3 | PAgP (desirable) | S1 Fa0/3-4 ↔ S3 Fa0/3-4 (Port-Channel 2) |
-| S2 ↔ S3 | LACP (active) | S2 Fa0/5-6 ↔ S3 Fa0/5-6 (Port-Channel 3) |
-| Router ↔ S1 | 802.1Q Trunk | Router Gig0/0 ↔ S1 Gig0/1 |
-
-## IP Addressing Table
-
-| Device | Interface / VLAN | IP Address | Subnet Mask | Default Gateway |
-|---|---|---|---|---|
-| R1 | Gig0/0.10 (VLAN 10) | 192.168.10.1 | 255.255.255.0 | N/A |
-| R1 | Gig0/0.20 (VLAN 20) | 192.168.20.1 | 255.255.255.0 | N/A |
-| R1 | Gig0/0.30 (VLAN 30) | 192.168.30.1 | 255.255.255.0 | N/A |
-| PC1 | NIC — VLAN 10 | 192.168.10.11 | 255.255.255.0 | 192.168.10.1 |
-| PC2 | NIC — VLAN 20 | 192.168.20.11 | 255.255.255.0 | 192.168.20.1 |
-| PC3 | NIC — VLAN 30 | 192.168.30.11 | 255.255.255.0 | 192.168.30.1 |
-| PC4 | NIC — VLAN 10 | 192.168.10.12 | 255.255.255.0 | 192.168.10.1 |
-| PC5 | NIC — VLAN 20 | 192.168.20.12 | 255.255.255.0 | 192.168.20.1 |
-| PC6 | NIC — VLAN 30 | 192.168.30.12 | 255.255.255.0 | 192.168.30.1 |
-
-## PC-to-Port Mapping
-
-| PC | Switch / Port | VLAN | VLAN Name |
-|---|---|---|---|
-| PC1 | S2 Fa0/7 | 10 | Student |
-| PC2 | S2 Fa0/8 | 20 | Lecture |
-| PC3 | S2 Fa0/9 | 30 | IT |
-| PC4 | S3 Fa0/9 | 10 | Student |
-| PC5 | S3 Fa0/8 | 20 | Lecture |
-| PC6 | S3 Fa0/7 | 30 | IT |
-
 ## 1. Configure Hostname, Secret Password and VLANs
 
 ### S1
